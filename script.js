@@ -4,12 +4,7 @@ const questions = [
       options: ["Japan", "Australia", "Turkey"],
       correct: "Japan",
       gif: `
-        <div class="tenor-gif-embed" style="width: 50%;" data-postid="16633861258819554494" data-share-method="host" data-aspect-ratio="1" data-width="50%">
-          <a href="https://tenor.com/view/peach-goma-peach-and-goma-peachy-cat-goma-goma-and-peach-gif-13298913404816783956">
-            Peach Goma Peach And Goma GIF
-          </a> 
-          from <a href="https://tenor.com/search/peach+goma-gifs">Peach Goma GIFs</a>
-        </div>
+      <img src="gifs/travel.gif" alt="Kebab GIF" style="width: 50%;"/>
       `,
     },
     {
