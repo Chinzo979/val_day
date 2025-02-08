@@ -1,0 +1,116 @@
+body {
+    background-color: pink;
+    font-family: 'Brush Script MT', cursive;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+}
+
+/* Container styling */
+.container {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* Slight transparency for styling */
+    border-radius: 20px;
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Styling for questions and text */
+h1, p {
+    color: white;
+    font-size: 2rem;
+}
+
+/* Buttons */
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    background-color: white;
+    color: pink;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: lightpink;
+}
+
+/* Centering the GIF properly */
+.gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Flower Frame using emojis */
+.flower-frame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.flower-frame::before,
+.flower-frame::after {
+    content: "🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸";
+    position: absolute;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+.flower-frame::before {
+    top: 0;
+}
+
+.flower-frame::after {
+    bottom: 0;
+}
+
+.left-flowers,
+.right-flowers {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    font-size: 30px;
+    color: white;
+    line-height: 40px;
+}
+
+.left-flowers {
+    left: 0;
+    writing-mode: vertical-rl;
+}
+
+.right-flowers {
+    right: 0;
+    writing-mode: vertical-rl;
+}
+
+/* Floating Heart Balloons */
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    50% { transform: translateY(-200px) rotate(10deg); opacity: 0.8; }
+    100% { transform: translateY(-400px) rotate(-10deg); opacity: 0; }
+}
+
+.heart-balloon {
+    position: absolute;
+    bottom: -100px;
+    animation: float 10s infinite ease-in-out;
+}
+
+.heart-balloon img {
+    width: 50px;
+    height: 50px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Question 💕</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .btn {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #f50057;
+        }
+
+        .btn.big {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Are you ready for the final question? 🎁</h1>
+        <button class="btn" onclick="handleResponse('yes')">Yes! 💖</button>
+        <button class="btn" onclick="handleResponse('no')">No! 😞</button>
+    </div>
+
+    <script>
+        let yesButton = document.querySelector('.btn:nth-of-type(1)');
+        let noButton = document.querySelector('.btn:nth-of-type(2)');
+
+        let clickCount = 0;
+
+        function handleResponse(response) {
+            if (response === 'yes') {
+                window.location.href = "surprise.html"; // Navigate to the next page
+            } else {
+                clickCount++;
+                yesButton.classList.add('big');
+                // Increase the size more with each "No" click
+                yesButton.style.transform = `scale(${1 + (clickCount * 0.2)})`;
+            }
+        }
+    </script>
+</body>
+</html>

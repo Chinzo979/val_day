@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: pink;
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        .background-images {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0.6;
+        }
+        .background-images img {
+            width: 30%;
+            max-height: 100vh;
+        }
+        .container {
+            background: rgba(255, 182, 193, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 100px;
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-images">
+        <img src="images/rapunzel.jpg" alt="Rapunzel">
+        <img src="images/stitch.jpg" alt="Pink Stitch">
+        <img src="images/blossom.jpg" alt="Blossom">
+    </div>
+    <div class="container">
+        <h1>Welcome, my beautiful princess 💖</h1>
+        <p>Are you in the mood to take a quiz today?</p>
+        <button onclick="nextPage('question1.html')">Yes</button>
+        <button onclick="nextPage('wrongAnswer.html')">No</button>
+    </div>
+    <script>
+        function nextPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

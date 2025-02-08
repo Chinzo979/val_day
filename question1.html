@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia Quiz 💖</title>
+  <!-- Make sure script.js is in the same folder or adjust path if needed -->
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container" id="quiz-container">
+    <h1 id="question-text"></h1>
+    <div id="options-container"></div>
+    <div class="gif-container" id="gif-container"></div>
+    <p id="message"></p>
+  </div>
+
+  <!-- Balloon animations -->
+  <div class="heart-balloon" style="left: 10%; bottom: -50px; animation-duration: 12s;">🎈</div>
+  <div class="heart-balloon" style="left: 20%; bottom: -100px; animation-duration: 14s;">❤️</div>
+  <div class="heart-balloon" style="left: 30%; bottom: -20px; animation-duration: 10s;">🎈</div>
+  <div class="heart-balloon" style="left: 40%; bottom: -150px; animation-duration: 16s;">❤️</div>
+  <div class="heart-balloon" style="left: 50%; bottom: -80px; animation-duration: 13s;">🎈</div>
+  <div class="heart-balloon" style="left: 60%; bottom: -30px; animation-duration: 11s;">❤️</div>
+  <div class="heart-balloon" style="left: 70%; bottom: -120px; animation-duration: 15s;">🎈</div>
+  <div class="heart-balloon" style="left: 15%; bottom: -90px; animation-duration: 17s;">
+    <img src="balloon.png" alt="Balloon" class="balloon-img">
+  </div>
+  <div class="heart-balloon" style="left: 55%; bottom: -140px; animation-duration: 19s;">
+    <img src="balloon.png" alt="Balloon" class="balloon-img">
+  </div>
+  <div class="heart-balloon" style="left: 80%; bottom: -60px; animation-duration: 14s;">
+    <img src="balloon.png" alt="Balloon" class="balloon-img">
+  </div>
+
+  <style>
+    .heart-balloon {
+      position: absolute;
+      font-size: 2.5rem;
+      animation: floatUp linear infinite;
+    }
+    .balloon-img {
+      width: 60px;
+      height: auto;
+    }
+    @keyframes floatUp {
+      from { transform: translateY(0); opacity: 1; }
+      to { transform: translateY(-120vh); opacity: 0; }
+    }
+  </style>
+
+  <!-- Tenor embed script (needed to display GIFs) -->
+  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+</body>
+</html>

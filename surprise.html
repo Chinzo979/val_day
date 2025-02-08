@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise! 🎁</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Initially hide the card */
+        .hidden {
+            display: none;
+        }
+        /* Optional: Add some styling for the gift box */
+        .gift-box {
+            cursor: pointer;
+            display: inline-block;
+            padding: 20px;
+            background-color: #FF69B4;
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        /* Styling for the card */
+        .card {
+            margin-top: 20px;
+            font-size: 24px;
+            text-align: center;
+            background-color: #FFB6C1;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="gift-box" onclick="openGift()">
+            🎁 Click to open!
+        </div>
+        <div class="card hidden" id="card">
+            <h2>Will you be my Valentine? 💖</h2>
+            <p>💌 Love, Chinmay</p>
+        </div>
+    </div>
+
+    <script>
+        // Function to show the card when the gift box is clicked
+        function openGift() {
+            document.getElementById("card").classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>
